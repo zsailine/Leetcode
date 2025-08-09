@@ -59,10 +59,9 @@ public:
         ListNode    *slow = head;
         ListNode    *fast = head;
         ListNode    *top = head;
-        while (fast)
+        /* Slow and Fast Pointers */
+        while (fast && fast->next)
         {
-            if (fast->next == nullptr)
-                break ;
             fast = fast->next->next;
             slow = slow->next;
         }
