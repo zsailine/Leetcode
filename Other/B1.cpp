@@ -65,11 +65,17 @@ void	print(vector<string> const &tab)
 		std::cout << tab[i] << std::endl;; 
 	}
 }
-// bool isPossible(int R, int C)
-// {
-// 	vector<>
-// 	for ()
-// }
+bool isPossible(int R, int C, vector<string> &tab)
+{
+	if (R == 1)
+		return (false);
+	for (size_t i = 0; i < tab.size(); i++)
+	{
+		string replace(C, '^');
+		tab[i] = replace;
+	}
+	return (true);
+}
 
 int main()
 {
@@ -96,7 +102,7 @@ int main()
 		}
 		else
 		{
-			bool possible = isPossible(R, C);
+			bool possible = isPossible(R, C, tab);
 			if (!possible)
 				std::cout << "Case #" << i << ": Impossible\n";
 			else
